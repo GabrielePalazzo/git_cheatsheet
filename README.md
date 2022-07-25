@@ -23,7 +23,8 @@ Typical commit workflow:
  - Add modified / new files:
   - All files (use caution, check git status before doing it): `git add *` (or `git add .`)
   - Selected files: `git add filename1 filename2`
- - Remove files we want to delete from the repository (on Unix this also removes files from local directory): `git rm filename1 filename2`
+ - Remove files we want to delete from the repository (on Unix this also removes files from local directory): `git rm --cached filename1 filename2`
+   - without `--cached` the command also deletes the files from the filesystem
  - Create commit: `git commit -m "Brief commit description"`
  - Push changes to remote repository: `git push -u origin main`
 
